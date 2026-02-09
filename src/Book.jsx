@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import Info from './pages/Info';
 import Usecase from './pages/Usecase';
@@ -22,98 +22,89 @@ import BackCover from './pages/BackCover';
 
 const Book = () => {
   const bookRef = useRef();
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // 🚀 이 props 변수가 정의되어 있어야 에러가 안 나!
+  const bookProps = {
+    width: 500,
+    height: 700,
+    size: "fixed",
+    showCover: true,
+    flippingTime: 1000,
+    drawShadow: false,
+    showPageCorners: false,
+    shadowColor: "rgba(0, 0, 0, 0.03)",
+    mobileScrollSupport: true,
+    className: "portfolio-book",
+  };
 
   return (
     <div className="book-wrapper">
-      <HTMLFlipBook
-        width={500}
-        height={700}
-        size="fixed"
-        showCover={true}
-        flippingTime={1000}
-        className="portfolio-book"
+      
+      {/* 1. 배경 레이어: currentPage가 17일 때만 visible 클래스가 붙어 */}
+      <div className={`final-arrival-layer ${currentPage >= 17 ? 'visible' : 'hidden'}`}>
+        <a href="https://yunana030.github.io/nanaful_day/" className="nav-group">
+          <span className="top-label">다음 여정을 시작하는 책장을 넘겨주세요</span>
+          <span className="nav-bottom-text">Back to Portfolio</span>
+          <div className="nav-line"></div>
+        </a>
+      </div>
+
+      {/* 2. 플립북 본체 */}
+      <HTMLFlipBook 
         ref={bookRef}
-        drawShadow={false}
-        showPageCorners={false}
-        shadowColor="rgba(0, 0, 0, 0.03)"
-
+        onFlip={(e) => {
+          // 직접 현재 페이지 인덱스를 물어봐서 업데이트
+          const realIndex = bookRef.current.pageFlip().getCurrentPageIndex();
+          setCurrentPage(realIndex);
+          console.log("현재 페이지:", realIndex);
+        }}
+        {...bookProps}
       >
-
-        {/* ===== 표지 ===== */}
+      
+        {/* ===== 표지 (0) ===== */}
         <div className="page" data-density="hard">
           <img src={main} alt="Cover" className="page-img" />
         </div>
 
-        {/* ===== 펼침 1 ===== */}
-        <div className="page">
-          <Info />
-        </div>
-        <div className="page">
-          <Youtube />
-        </div>
+        {/* ===== 펼침 1 (1, 2) ===== */}
+        <div className="page"><Info /></div>
+        <div className="page"><Youtube /></div>
 
-        {/* ===== 펼침 2 ===== */}
-        <div className="page">
-          <Erd />
-        </div>
+        {/* ===== 펼침 2 (3, 4) ===== */}
+        <div className="page"><Erd /></div>
+        <div className="page"><Usecase /></div>
 
-        <div className="page">
-          <Usecase />
-        </div>
+        {/* 3 (5, 6) */}
+        <div className="page"><DFD /></div>
+        <div className="page"><Troubleshooting /></div>
 
-        {/* 3 */}
-        <div className="page">
-          <DFD />
-        </div>
-        <div className="page">
-          <Troubleshooting />
-        </div>
-{/* 여기부터는 웹페이지 소개 */}
-        {/* 4 */}
-        <div className="page">
-          <P1 />
-        </div>
-        <div className="page">
-          <P2 />
-        </div>
+        {/* 4 (7, 8) */}
+        <div className="page"><P1 /></div>
+        <div className="page"><P2 /></div>
 
-        {/* 5 */}
-        <div className="page">
-          <P3 />
-        </div>
-        <div className="page">
-          <P4 />
-        </div>
+        {/* 5 (9, 10) */}
+        <div className="page"><P3 /></div>
+        <div className="page"><P4 /></div>
 
-        {/* 6 */}
-        <div className="page">
-          <P5 />
-        </div>
-        <div className="page">
-          <P6 />
-        </div>
-        {/* 6 */}
-        <div className="page">
-          <P7 />
-        </div>
-        <div className="page">
-          <P8 />
-        </div>
-        {/* 7 */}
-        <div className="page">
-          <Learn />
-        </div>
-        <div className="page">
-          <Thanks />
-        </div>
+        {/* 6 (11, 12) */}
+        <div className="page"><P5 /></div>
+        <div className="page"><P6 /></div>
 
+        {/* 7 (13, 14) */}
+        <div className="page"><P7 /></div>
+        <div className="page"><P8 /></div>
 
-        {/* 🔹🔹🔹 핵심 — 더미 페이지 (이거 없으면 계속 한 장) 🔹🔹🔹 */}
+        {/* 8 (15, 16) */}
+        <div className="page"><Learn /></div>
+        <div className="page"><Thanks /></div>
+
+        {/* 마지막 뒷표지 (17) */}
         <div className="page" data-density="hard">
           <BackCover />
         </div>
-
       </HTMLFlipBook>
+
     </div>
   );
 };
