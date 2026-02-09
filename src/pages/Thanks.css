@@ -1,0 +1,68 @@
+/* Thanks.css */
+.thanks-container {
+  width: 500px !important;
+  height: 700px !important;
+  /* 표지의 하늘색 시작! */
+  background: linear-gradient(to bottom, #ACE1F3 0%, #FFFFFF 100%) !important;
+  position: relative;
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 표지의 비행기 궤적 같은 느낌 */
+.flight-path {
+  position: absolute;
+  width: 200%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.9);
+  transform: rotate(-10deg);
+  top: 40%;
+  z-index: 0;
+}
+
+.thanks-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.thanks-main-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #1E40AF; /* 신뢰감 있는 블루 */
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.thanks-sub-text {
+  font-size: 1.1rem;
+  color: #374151;
+  margin-top: 30px;
+  font-weight: 600;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+/* 표지의 CONTACT 박스 스타일 수미상관 */
+.final-contact-wrapper {
+  margin-top: 60px;
+  display: inline-block;
+  background: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: 3px solid #EF4444; /* 표지의 그 빨간색! */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.final-contact-text {
+  color: #374151;
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

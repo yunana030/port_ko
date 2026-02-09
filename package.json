@@ -2,6 +2,7 @@
   "name": "port-ko",
   "private": true,
   "version": "0.0.0",
+  "hompage" : "https://github.com/yunana030/port_ko.git",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +14,8 @@
   },
   "dependencies": {
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-pageflip": "^2.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

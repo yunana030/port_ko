@@ -1,0 +1,46 @@
+/* BackCover.css */
+.back-cover-container {
+  width: 500px !important;
+  height: 700px !important;
+  /* 표지와 동일한 하늘색(#ACE1F3)으로 꽉 채워서 통일감 부여 */
+  background: linear-gradient(180deg, #aee8fc 0%,  #5BD5FF 100%) !important;
+  position: relative;
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 중앙 팀 로고 스타일 */
+.back-team-logo {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  letter-spacing: -1.5px;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 프로젝트 슬로건 스타일 */
+.back-slogan {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* 하단 프로젝트 정보 */
+.back-project-info {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+}
+
+.back-project-info p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 5px 0;
+  font-weight: 500;
+}

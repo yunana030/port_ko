@@ -1,0 +1,158 @@
+/* 기본 컨테이너 설정 */
+.info-container {
+  width: 500px !important;
+  height: 700px !important;
+  background-color: #E8F7FF !important;
+  position: relative;
+  overflow: hidden !important;
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  box-sizing: border-box;
+}
+
+/* 배경 원형 장식 */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.5;
+  z-index: 0;
+}
+.circle-1 { width: 200px; height: 200px; top: -50px; right: -50px; }
+.circle-2 { width: 150px; height: 150px; bottom: -30px; left: -50px; background: #FFD966; opacity: 0.3; }
+
+/* 내부 여백 (하단 잘림 방지를 위해 미세 조정) */
+.inner-padding {
+  position: relative;
+  z-index: 1;
+  padding: 50px 35px 30px 35px !important;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 헤더 스타일 */
+.info-header {
+  margin-bottom: 20px;
+}
+.sub-question {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.main-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #222;
+  margin: 0;
+  letter-spacing: -1px;
+}
+.highlight {
+  color: #00A3FF;
+}
+
+/* 기술 스택 그리드 (컴팩트하게 조정) */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 25px;
+}
+.tech-item {
+  background: white;
+  padding: 8px 10px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+  border: 1px solid #D1EEFF;
+}
+.tech-icon-dot {
+  width: 6px;
+  height: 6px;
+  background: #00A3FF;
+  border-radius: 50%;
+}
+.tech-item span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #444;
+}
+
+/* 섹션 구분 타이틀 */
+.section-divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.section-divider span {
+  background: #FFD966;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+/* 역할 카드 레이아웃 */
+.role-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.role-card {
+  background: white;
+  padding: 18px 20px;
+  border-radius: 12px 25px 25px 12px;
+  border-bottom: 3px solid #E9ECEF;
+  transition: all 0.2s ease;
+  position: relative;
+  /* 핵심 포인트: 왼쪽 강조선 */
+  border-left: 6px solid #FFD966;
+}
+
+/* 강조선 색상 분리 */
+.role-card.accent-yellow { border-left-color: #FFD966; }
+.role-card.accent-blue { border-left-color: #00A3FF; }
+
+.role-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.icon-emoji { font-size: 1.1rem; }
+.card-header h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #004A7C;
+  margin: 0;
+}
+
+/* 리스트 스타일 (컴팩트하게 조정) */
+.role-bullet-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+.role-bullet-list li {
+  font-size: 0.82rem;
+  color: #555;
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 15px;
+  line-height: 1.4;
+}
+.role-bullet-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #00A3FF;
+  font-weight: bold;
+}

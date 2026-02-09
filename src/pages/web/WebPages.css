@@ -1,0 +1,196 @@
+/* 1. 배경 그라데이션: 이전 페이지의 톤을 유지하되 채도를 살짝 높임 */
+.theme-sky { 
+  background: linear-gradient(180deg, #E0F2FE 0%, #FFFFFF 100%) !important; 
+}
+.theme-green { 
+  background: linear-gradient(180deg, #DCFCE7 0%, #FFFFFF 100%) !important; 
+}
+
+/* 2. 전체 컨테이너 */
+.web-page-container {
+  width: 500px !important;
+  height: 700px !important;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.web-page-container .inner-padding {
+  padding: 20px 35px 30px 35px !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* 3. 인덱스 라벨 (가운데 정렬 목차 스타일) */
+.web-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #64748B;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+}
+.web-tag::before, .web-tag::after {
+  content: "";
+  flex: 0 1 20px;
+  height: 1px;
+  background-color: #CBD5E1;
+  margin: 0 15px;
+}
+
+/* 4. 헤더 및 메인 타이틀 */
+.web-header { 
+  text-align: center;
+  margin-bottom: 6px; /* 타이틀과 알약 제목 간격 초밀착 */
+}
+.web-main-title { 
+  font-size: 1.9rem; 
+  font-weight: 900; 
+  color: #1E293B; 
+  line-height: 1.2; 
+}
+.highlight-point { color: #F59E0B; }
+
+/* 5. 알약 제목 (이전 페이지의 라벨 스타일) */
+.content-title-box { 
+  text-align: center;
+  margin-bottom: 15px; 
+}
+.content-sub-title {
+  display: inline-block;
+  background-color: #FEF3C7; 
+  color: #D97706; 
+  padding: 4px 14px;
+  border-radius: 8px; /* 이전 페이지 느낌을 위해 약간 각지게 조정 */
+  font-size: 0.75rem;
+  font-weight: 800;
+  border: 1px solid #FDE68A;
+}
+
+/* 6. 이미지 박스 (스크롤 방지 및 투명 배경) */
+.web-screenshot-box.flat {
+  flex: 1;
+  width: 100%;
+  background: transparent;
+  margin-bottom: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 10px 25px rgba(0,0,0,0.08));
+}
+
+.web-img-fluid { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; /* 긴 이미지도 잘리지 않게 비율 유지 */
+  border-radius: 14px;
+}
+
+/* 7. 하단 캡션 박스 (이전 페이지 SOLUTION 박스 스타일) */
+.web-description-card {
+  background-color: #F8FAFC;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border-left: 6px solid #F59E0B;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  flex-shrink: 0;
+}
+
+.caption-label { 
+  font-size: 0.65rem; 
+  font-weight: 900; 
+  color: #F59E0B; 
+  margin-bottom: 4px; 
+  display: block;
+}
+
+.web-description-card p {
+  font-size: 0.85rem;
+  color: #334155;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 700;
+  word-break: keep-all;
+}
+
+
+/* 3~4 */
+
+/* P3: 글쓰기 - 차분하지만 깊이감 있는 딥 퍼플/블루 계열 그라데이션 */
+./* --- P3 & P4 전용 개별 설정 (공통 CSS는 그대로 두세요) --- */
+
+/* P3: 글쓰기 페이지 배경 (차분한 블루 스팟) */
+.theme-write {
+  background: radial-gradient(at 0% 0%, #e0e7ff 0%, transparent 45%),
+              radial-gradient(at 100% 100%, #f1f5f9 0%, transparent 45%),
+              #ffffff !important;
+}
+
+/* P4: 로그인 페이지 배경 (따뜻한 베이지 + 비행기 배경) */
+/* P4: 상큼한 파스텔 테마 */
+.theme-sign {
+  /* 파스텔 블루에서 아주 연한 연두색으로 이어지는 상큼한 그라데이션 */
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #fefce8 100%) !important;
+  border: none;
+}
+
+/* P3: 상큼한 파스텔 노랑/하늘 테마 */
+.theme-write {
+  background: linear-gradient(135deg, #fffbeb 0%, #e0f2fe 100%) !important;
+  border: none;
+}
+
+
+/* 5~6 */
+/* P5: 상세페이지 - 청량한 민트 & 스카이 */
+.theme-detail {
+  background: linear-gradient(135deg, #f0fdfa 0%, #e0f2fe 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* P6: 마이페이지 - 포근한 라벤더 & 로즈 */
+.theme-mypage {
+  background: linear-gradient(135deg, #f5f3ff 0%, #fdf2f8 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 이미지 박스 투명화 (공통 적용 혹은 개별 적용) */
+.web-screenshot-box.flat {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  border: none !important;
+  box-shadow: none !important; /* 박스 그림자 제거 */
+}
+
+/* 이미지 자체에만 살짝 그림자를 줘서 입체감 살리기 */
+.web-img-fluid {
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+}
+
+
+/* 7~8 */
+/* P7: 리뷰 & 게시판 - 연한 레몬 옐로우 파스텔 */
+/* P7: 리뷰 & 게시판 - 연한 레몬 옐로우 */
+.theme-review {
+  background: linear-gradient(135deg, #fffbeb 0%, #fff8a8 100%) !important;
+}
+
+/* P8: 어드민 - 상큼한 연두 & 노랑 */
+.theme-admin {
+  background: linear-gradient(135deg, #fefce8 0%, #bbffcf 100%) !important;
+}
+
+/* 이미지 박스 투명화 (P7, P8 전용) */
+.theme-review .web-screenshot-box.flat,
+.theme-admin .web-screenshot-box.flat {
+  background: transparent !important;
+  border: none !important;
+}

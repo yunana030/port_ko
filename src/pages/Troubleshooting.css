@@ -1,0 +1,90 @@
+.ts-container {
+  width: 500px !important;
+  height: 700px !important;
+  background-color: #FFFBEB !important; /* 따뜻한 베이지/옐로우 */
+  position: relative;
+  overflow: hidden !important;
+}
+.ts-container .inner-padding {
+  /* 전체 설정인 50px을 무시하고 20px로 당김 */
+  padding-top: 10px !important; 
+}
+
+.highlight-orange { color: #D69E2E; }
+
+.inner-padding {
+  padding: 50px 30px 30px 30px !important; /* 패딩 최적화 */
+}
+
+.ts-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ts-card {
+  background: white;
+  padding: 15px 18px;
+  border-radius: 15px;
+  border-bottom: 3px solid #E9ECEF;
+  border-left: 6px solid #F6AD55;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+/* 카드별 포인트 컬러 */
+.accent-orange { border-left-color: #F6AD55; }
+.accent-red { border-left-color: #FC8181; }
+.accent-green { border-left-color: #68D391; }
+
+.ts-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 5px;
+  background: #FEFCBF;
+  color: #B7791F;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.ts-tag.error { background: #FFF5F5; color: #C53030; }
+.ts-tag.success { background: #F0FFF4; color: #2F855A; }
+
+.ts-card h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #2D3748;
+  margin: 0;
+}
+
+.ts-desc-main { font-size: 0.85rem; color: #4A5568; margin-top: 5px; font-weight: 600; }
+.ts-desc { font-size: 0.8rem; color: #718096; margin-top: 5px; line-height: 1.4; }
+
+/* 코드 블록 스타일 (포스트잇/터미널 느낌) */
+.code-block {
+  background: #2D3748;
+  color: #F7FAFC;
+  padding: 10px;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.7rem;
+  margin: 8px 0;
+  overflow-x: hidden;
+}
+.code-block pre { margin: 0; white-space: pre-wrap; }
+
+/* 결과 배지 */
+.result-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FFD966;
+  padding: 12px 20px;
+  border-radius: 50px;
+  margin-top: 5px;
+}
+.result-badge p {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #444;
+  margin: 0;
+}

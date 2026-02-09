@@ -1,0 +1,136 @@
+/* 각 페이지 최상위 컨테이너에 적용 */
+/* .info-page-container, .youtube-page-container {
+  width: 500px !important;
+  height: 700px !important;
+  position: relative !important;
+  background: linear-gradient(to bottom, #ACE1F3 0%, #5BD5FF 100%) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+} */
+
+.youtube-container {
+  width: 500px !important;
+  height: 700px !important;
+  background: linear-gradient(to bottom, #E8F9F1 0%, #F4FFF9 100%) !important;
+  position: relative;
+  overflow: hidden !important;
+}
+
+/* Info 페이지와 유사한 배경 장식 */
+.circle-top-right {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  /* 배경보다 조금 더 진한 민트색 */
+  background: #D1F2E1; 
+  border-radius: 50%;
+  top: -80px;
+  right: -80px;
+  z-index: 0;
+  opacity: 0.6;
+}
+.inner-padding {
+  position: relative;
+  z-index: 1;
+  padding: 60px 40px !important; /* Info와 동일하게 맞춤 */
+}
+
+/* 비디오 섹션 배치 */
+.video-section {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.video-card {
+  display: block;
+  text-decoration: none;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnail-wrapper {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #eee;
+}
+
+.thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 0, 0, 0.9);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 16px solid white;
+  margin-left: 4px;
+}
+
+.video-info {
+  padding: 15px 20px;
+  background: #fff;
+}
+
+.platform-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #2F855A; /* 진한 초록색 */
+  background: #C6F6D5; /* 연한 초록색 */
+  padding: 2px 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.video-desc {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* 하단 가이드 카드 (Info 카드 스타일 적용) */
+.guide-card {
+  background: #F8F9FA;
+  border-radius: 20px;
+  padding: 20px;
+  border-left: 5px solid #FFD966;
+}
+
+.guide-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.guide-content p {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+}

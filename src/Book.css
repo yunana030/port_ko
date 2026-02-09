@@ -1,0 +1,205 @@
+/* Book.css */
+.book-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+
+  min-width: 1000px;   /* ← 펼침 공간 */
+
+  /* 바탕은 아주 연한 하늘색 */
+  background-color: #E0F2FE;
+}
+/* Book.css */
+
+.portfolio-book {
+  /* 1. 사방으로 퍼지는 shadow는 지우거나 아주 연하게! */
+  /* 2. 아래쪽으로만 길게 늘어지는 shadow 추가 */
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+  
+  /* 만약 box-shadow를 쓴다면 아래처럼 (x축 0, y축을 크게) */
+  /* box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important; */
+
+  transition: transform 0.3s ease;
+}
+
+/* 꿀팁: 책을 펼쳤을 때 그림자가 너무 어색하면 컨테이너 여백 조절 */
+.book-wrapper {
+  padding: 50px; 
+  box-sizing: border-box;
+}
+
+/* 큼직한 구름 장식 1 */
+.book-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: white;
+  border-radius: 50%;
+  top: -200px;
+  left: -100px;
+  opacity: 0.5;
+  filter: blur(80px); /* 경계를 아주 뭉글뭉글하게 */
+}
+
+/* 큼직한 구름 장식 2 */
+.book-wrapper::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #fefce8; /* 은은한 노란색 한 방울 */
+  border-radius: 50%;
+  bottom: -150px;
+  right: -50px;
+  opacity: 0.4;
+  filter: blur(100px);
+}
+
+.portfolio-book {
+  /* 라이브러리 자체 크기 강제 500 한 면*/
+  width: 1000px !important;
+  height: 700px !important;
+}
+
+.page {
+  width: 500px !important;
+  height: 700px !important;
+  background-color: white;
+  overflow: hidden !important; /* 내부 언덕 디자인 잘림 방지 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.page-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: fill !important; /* 잘림 방지를 위해 이미지 강제 맞춤 */
+}
+
+
+.empty-page {
+  background: white;
+}
+
+
+/* v페이지 넘길때 그림자 */
+/* 🔹 페이지 넘길 때 그림자 ‘완전 통제’ 버전 */
+.stf__shadow {
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.01),
+    rgba(0, 0, 0, 0)
+  ) !important;
+  opacity: 0.3 !important;   /* ← 이 줄이 핵심 */
+}
+
+/* 책 옆면에 생기는 검은 경계선도 같이 정리 */
+.stf__outerShadow {
+  box-shadow: none !important;
+}
+/* 🔹 호버할 때 생기는 검은 테두리/띠 제거 */
+.stf__hardShadow {
+  box-shadow: none !important;
+}
+
+.stf__hardInner {
+  box-shadow: none !important;
+}
+/* 🔹 호버 시 들리는 하드커버 검은 줄 완전 제거 */
+/* 🔹 페이지플립 하드커버 관련 그림자 ‘싹 다’ 제거 */
+[class*="stf__hard"] {
+  box-shadow: none !important;
+  filter: none !important;
+  background: transparent !important;
+}
+
+/* 혹시 남아 있는 얇은 선까지 마무리 */
+[class*="stf__shadow"] {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* ====== 최종 강제 삭제 세트 ====== */
+
+/* 1) 하드커버 자체 효과 차단 */
+.portfolio-book .stf__hardPage {
+  box-shadow: none !important;
+  filter: none !important;
+  border: none !important;
+}
+
+/* 2) 라이브러리가 만든 가짜 그림자 레이어 전부 제거 */
+.portfolio-book .stf__hardShadow,
+.portfolio-book .stf__hardInner,
+.portfolio-book .stf__shadow {
+  display: none !important;
+}
+
+/* 3) 혹시 남는 의사요소까지 완전 차단 */
+.portfolio-book .stf__hardPage::before,
+.portfolio-book .stf__hardPage::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* 4) 마지막 보험 */
+.portfolio-book * {
+  --shadow-color: transparent !important;
+}
+
+.portfolio-book {
+  --page-shadow: none !important;
+}
+/* 🔹 요동치는 그림자 원천 차단 */
+.stf__item {
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* 좌/우 분리 페이지에 남는 잔상까지 정리 */
+.stf__item.--left,
+.stf__item.--right {
+  box-shadow: none !important;
+  filter: none !important;
+}
+/* 요동치는 검은 테두리 완전 제거 */
+.stf__item {
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+/* 애니메이션 중에도 유지되도록 강제 */
+.stf__item.--soft,
+.stf__item.--left,
+.stf__item.--right {
+  filter: none !important;
+  box-shadow: none !important;
+}
+/* 호버 시 생기는 검은 대각선 완전 차단용 덮개 */
+.book-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    transparent 60%,
+    rgba(255,255,255,0.03) 100%
+  );
+  mix-blend-mode: lighten;
+}
+/* 🔹 책 위에만 얇은 보정 레이어를 씌워 검은 코너 중화 */
+/* 왼쪽 페이지 안쪽 그림자 */
+.stf__item.--left .page {
+  box-shadow: inset -6px 0 10px rgba(0,0,0,0.06);
+}
+
+/* 오른쪽 페이지 안쪽 그림자 */
+.stf__item.--right .page {
+  box-shadow: inset 6px 0 10px rgba(0,0,0,0.06);
+}
