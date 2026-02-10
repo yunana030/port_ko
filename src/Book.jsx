@@ -40,10 +40,7 @@ const Book = () => {
 
   return (
     <div className="book-wrapper">
-      <div className="system-guide-bar">
-        <span className="material-symbols-outlined">info</span>
-        <p>브라우저 창을 키우거나 전체 화면으로 보시면 더욱 쾌적하게 감상하실 수 있습니다.</p>
-      </div>
+      
       
       {/* 1. 배경 레이어: currentPage가 17일 때만 visible 클래스가 붙어 */}
       <div className={`final-arrival-layer ${currentPage >= 17 ? 'visible' : 'hidden'}`}>
