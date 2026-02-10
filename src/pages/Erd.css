@@ -1,0 +1,108 @@
+/* 컨테이너 스타일 통일 */
+.erd-container {
+  width: 500px !important;
+  height: 700px !important;
+  /* Info(#E8F7FF)보다 아주 살짝 더 차분한 퍼플 블루톤 */
+  background: linear-gradient(to bottom, #ECECFF 0%, #F5F5FF 100%) !important;
+  position: relative;
+  overflow: hidden !important;
+  font-family: 'Pretendard', sans-serif;
+  box-sizing: border-box;
+}
+.erd-container .inner-padding > * {
+  transform: translateY(-25px); /* 모든 자식 요소를 25px만큼 위로 띄움 */
+}
+
+/* 배경 원형 장식 복제 */
+.erd-circle {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: white;
+  opacity: 0.4;
+  border-radius: 50%;
+  top: -60px;
+  right: -60px;
+  z-index: 0;
+}
+
+.inner-padding {
+  position: relative;
+  z-index: 1;
+  padding: 20px 35px 30px 35px ;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 이미지 카드 섹션 */
+.erd-img-section {
+  flex: 1;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.erd-img-card {
+  width: 100%;
+  height: 340px;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #DDE0FF;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.erd-img-card:hover {
+  transform: translateY(-5px);
+}
+
+.erd-fit-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 15px;
+}
+
+/* 클릭 유도 오버레이 */
+.zoom-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
+  background: rgba(0, 163, 255, 0.05);
+  text-align: center;
+  border-top: 1px dashed #DDE0FF;
+}
+
+.zoom-overlay span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #00A3FF;
+}
+
+/* 가이드 카드 스타일 (Youtube/Info와 싱크로율 100%) */
+.erd-guide-card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 18px;
+  border-left: 5px solid #ffc400; /* 포인트 칼라 */
+  margin-bottom: 10px;
+}
+
+.erd-guide-card p {
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.erd-guide-card strong {
+  color: #c4a339;
+  font-weight: 800;
+}

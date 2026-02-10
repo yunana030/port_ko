@@ -2,7 +2,7 @@
   "name": "port-ko",
   "private": true,
   "version": "0.0.0",
-  "hompage" : "https://github.com/yunana030/port_ko.git",
+  "hompage": "https://github.com/yunana030/port_ko.git",
   "type": "module",
   "scripts": {
     "dev": "vite",

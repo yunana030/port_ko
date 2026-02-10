@@ -5,7 +5,7 @@ import Usecase from './pages/Usecase';
 import Youtube from './pages/Youtube';
 import main from './assets/images/main.png';
 import './Book.css';
-import Erd from './pages/ERD';
+import Erd from './pages/Erd';
 import DFD from './pages/DFD';
 import Troubleshooting from './pages/Troubleshooting';
 import P1 from './pages/web/P1';

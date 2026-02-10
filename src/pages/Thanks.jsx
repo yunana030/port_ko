@@ -9,7 +9,7 @@ const Thanks = forwardRef((props, ref) => {
       
       <div className="thanks-content">
         <h1 className="thanks-main-title">
-          KODEHUN<span style={{ color: '#EF4444' }}>.</span>
+          KODEHUN<span style={{ color: '#0043fa' }}>.</span>
         </h1>
         
         <p className="thanks-sub-text">
@@ -24,7 +24,7 @@ const Thanks = forwardRef((props, ref) => {
         {/* 표지와 똑같은 디자인의 연락처 박스 */}
         <div className="final-contact-wrapper">
           <div className="final-contact-text">
-            <span style={{ color: '#EF4444', fontSize: '1.2rem' }}>✉</span>
+            <span style={{ color: '#53b2ff', fontSize: '1.2rem' }}>✉</span>
             CONTACT : eka8096@naver.com
           </div>
         </div>
