@@ -23,7 +23,7 @@ const Usecase = forwardRef((props, ref) => {
               </li>
               <li>
                 <span className="dot"></span>
-                <p><strong>이용 불가:</strong> 자유게시판 접근 및 글쓰기 권한 없음</p>
+                <p><strong>이용 불가:</strong> 모든 게시판 글 등록 권한 없음</p>
               </li>
             </ul>
           </div>
@@ -37,11 +37,11 @@ const Usecase = forwardRef((props, ref) => {
               </li>
               <li>
                 <span className="dot"></span>
-                <p><strong>PLACE 특화:</strong> 게시글 좋아요 및 즐겨찾기 연동</p>
+                <p><strong>PLACE 게시판:</strong> 좋아요 및 즐겨찾기 가능</p>
               </li>
               <li>
                 <span className="dot"></span>
-                <p><strong>마이페이지:</strong> 프로필 관리 및 <strong>즐겨찾기 목록</strong> 실시간 조회</p>
+                <p><strong>마이페이지:</strong> 프로필 관리 및 <strong>즐겨찾기 목록</strong> 조회 가능</p>
               </li>
             </ul>
           </div>
@@ -52,11 +52,11 @@ const Usecase = forwardRef((props, ref) => {
             <ul className="action-list">
               <li>
                 <span className="dot"></span>
-                <p><strong>회원 관리:</strong> 유저 강제 탈퇴 및 <strong>서비스 등급 조정</strong></p>
+                <p><strong>회원 관리:</strong> 유저 관리 및 <strong>등급 조정 가능</strong></p>
               </li>
               <li>
                 <span className="dot"></span>
-                <p><strong>운영 관리:</strong> 공지사항 등록 및 모든 등록물 모니터링</p>
+                <p><strong>운영 관리:</strong> 공지사항 등록 및 모든 게시글 조회·삭제 가능</p>
               </li>
             </ul>
           </div>

@@ -1,8 +1,9 @@
 import React, { forwardRef } from 'react';
 import './Youtube.css';
 
+// https://www.youtube.com/watch?si=XmcVzi7P11Q8eO10&v=vfQGMKwUghw&feature=youtu.be
 const Youtube = forwardRef((props, ref) => {
-  const videoId = "YOUR_VIDEO_ID"; // 실제 ID로 교체
+  const videoId = "vfQGMKwUghw"; // 실제 ID로 교체
   const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
   const thumbUrl = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
 
